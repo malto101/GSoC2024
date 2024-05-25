@@ -16,9 +16,9 @@ Introducing Zephyr RTOS support for the BeagleBone AI-64 platform, with the aim 
 - **Contributor:** [Dhruv Menon](https://github.com/malto101)
 - **Mentors:** [Dhruva Gole](https://github.com/DhruvaG2000), [Nishanth Menon](https://github.com/nmenon), [Andrew Davis](https://github.com/glneo)  
 - **Code:** 
-- **Documentation:** https://malto101.github.io/GSoC2024/ 
-- **GSoC Entry:** https://summerofcode.withgoogle.com/programs/2024/projects/IBlfhKXK
-- **Weekly Progress Report:** https://forum.beagleboard.org/t/weekly-progress-report-thread-upstreaming-zephyr-support-on-beaglebone-ai-64/38509/2
+- **Documentation:** [The link to the Documentation](https://malto101.github.io/GSoC2024/) 
+- **GSoC Entry:** [The link to the GSoC Entry](https://summerofcode.withgoogle.com/programs/2024/projects/IBlfhKXK)
+- **Weekly Progress Report:** [The link to the Forum](https://forum.beagleboard.org/t/weekly-progress-report-thread-upstreaming-zephyr-support-on-beaglebone-ai-64/38509/2)
 
 ## Introduction <a name="intro"></a>
 
@@ -42,7 +42,25 @@ The Linux running on the Cortex-A72 uses the remoteproc framework to manage the 
 
 Typically AMP(Asymmetric Multiprocessing Processor) remote processors employ dedicated DSP codecs and multimedia hardware accelerators, and therefore are often used to offload CPU-intensive multimedia tasks from the main application processor. These remote processors could also be used to control latency-sensitive sensors, drive random hardware blocks, or just perform background tasks while the main CPU is idling. Rpmsg is a **virtio-based messaging bus** that allows kernel drivers to communicate with remote processors available on the system. In turn, drivers could then expose appropriate user space interfaces, if needed. is a message passing mechanism that requests resources through [remoteproc](https://gsoc.beagleboard.io/proposals/melta101.html#remoteproc) and builds on top of the virtio framework. Shared buffers are requested through the resource_table and provided by the remoteproc module during Zephyr firmware loading
 
+## Remote Processor Messaging (rpmsg) Framework
 
+Typically AMP(Asymmetric Multiprocessing Processor) remote processors employ dedicated DSP codecs and multimedia hardware accelerators, and therefore are often used to offload CPU-intensive multimedia tasks from the main application processor. These remote processors could also be used to control latency-sensitive sensors, drive random hardware blocks, or just perform background tasks while the main CPU is idling. Rpmsg is a **virtio-based messaging bus** that allows kernel drivers to communicate with remote processors available on the system. In turn, drivers could then expose appropriate user space interfaces, if needed. is a message passing mechanism that requests resources through remoteproc and builds on top of the virtio framework. Shared buffers are requested through the resource_table and provided by the remoteproc module during Zephyr firmware loading
+
+## Open Asymmetric multiprocessing(OpenAMP) Framework
+
+The OpenAMP framework provides software components that enable development of software applications for Asymmetric Multiprocessing (AMP) systems. The framework provides key capabilities such as Life Cycle Management, and Inter Processor Communication capabilities and Provides a stand alone library usable with zephyr environments Life Cycle Management (LCM) in OpenAMP is provided by the remoteproc component. Remoteproc APIs allow software applications running on the master processor to manage the life cycle of a remote processor and its software context while IPC(Inter Process Communication) a mechanism that allows processes to communicate with each other and synchronize their actions. The communication between these processes can be seen as a method of co-operation between them. Processes can communicate with each other through both: Shared Memory and Message passing
+
+## TI-SCI(Texas Instruments System Controller Interface)
+
+SCI is one the primary communication protocol for a TDA4VM processor from which the host uses multiple threads to communicate with the systems firmware. This is a set of message formats and operation sequence required to talk to the system service in the SoC.
+
+The Cortex-R5F core acts as the SCI server, which means it hosts the TISCI firmware responsible for managing system resources and peripherals while The Cortex-A72 core acts as the SCI client, interacting with the TISCI firmware running on the Cortex-R5F core.
+
+- Upon boot up, The SCI client (A72) will initialize the communication channels with the SCI server (R5F), ensuring bidirectional communication for sending commands and receiving responses.
+
+- Client can request resource allocation, set clock frequencies, manage power domains, configure interrupt controllers, and control peripheral devices on the system.
+
+- The Client can also query with the SCI server for status of the device.
 
 
 
