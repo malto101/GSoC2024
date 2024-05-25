@@ -18,7 +18,7 @@ Introducing Zephyr RTOS support for the BeagleBone AI-64 platform, with the aim 
 - **Code:** 
 - **Documentation:** https://malto101.github.io/GSoC2024/ 
 - **GSoC Entry:** https://summerofcode.withgoogle.com/programs/2024/projects/IBlfhKXK
-- **Weekly Progress Report:** 
+- **Weekly Progress Report:** https://forum.beagleboard.org/t/weekly-progress-report-thread-upstreaming-zephyr-support-on-beaglebone-ai-64/38509/2
 
 ## Introduction <a name="intro"></a>
 
