@@ -11,6 +11,8 @@ has_children: false
 
 | Title                    | Contributor        | Link                                                                                               | Status      |
 | :----------------------- | :-----------------:| :-------------------------------------------------------------------------------------------------:| -----------:|
+| GPIO Support             |   Prashanth        | [PULL REQUEST for GPIO Suport](https://github.com/zephyrproject-rtos/zephyr/pull/61316)            | In progress |
+| TI VIM                   |   Prashanth        | [PULL REQUEST for TI VIM](https://github.com/zephyrproject-rtos/zephyr/pull/60856)                 | In progress |
 | SecProxy                 |   Vaishnav M A     | [PULL REQUEST for SecProxy](https://github.com/zephyrproject-rtos/zephyr/pull/71528)               | In progress |
 | DM Timer                 |   Andrew Davis     | [PULL REQUEST for DM Timer](https://github.com/zephyrproject-rtos/zephyr/pull/71526)               | In progress |
 | SoC and Board Support    |   Andrew Davis     | [PULL REQUEST for SoC and Board Support](https://github.com/zephyrproject-rtos/zephyr/pull/71527)  | In progress |
