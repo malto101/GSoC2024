@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Current Status
-nav_order: 1
+nav_order: 2
 description: "Current status of the upstreaming Zephyr of BeagleBone AI 64."
 permalink: /status
 has_children: false
