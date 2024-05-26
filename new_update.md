@@ -16,4 +16,4 @@ has_children: false
 | SecProxy                 |   Vaishnav M A     | [PULL REQUEST for SecProxy](https://github.com/zephyrproject-rtos/zephyr/pull/71528)               | dRAFT       |
 | DM Timer                 |   Andrew Davis     | [PULL REQUEST for DM Timer](https://github.com/zephyrproject-rtos/zephyr/pull/71526)               | In progress |
 | SoC and Board Support    |   Andrew Davis     | [PULL REQUEST for SoC and Board Support](https://github.com/zephyrproject-rtos/zephyr/pull/71527)  | In progress |
-| :----------------------- | :-----------------:| :-------------------------------------------------------------------------------------------------:| -----------:|
+| :----------------------- | :----------------: | :------------------------------------------------------------------------------------------------: | -----------:|
