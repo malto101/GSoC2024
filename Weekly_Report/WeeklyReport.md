@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bonding Period
+title: Weekly Timeline
 nav_order: 2
 description: "Timeline summary for upstreaming Zephyr of BeagleBone AI 64."
 permalink: /Weekly_Report
