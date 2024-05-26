@@ -2,7 +2,7 @@
 layout: default
 title: Bonding Period
 parent: Weekly Timeline
-nav_order: 3
+nav_order: 4
 description: "Community Bonding period for upstreaming Zephyr of BeagleBone AI 64."
 permalink: /Weekly_Report/Bonding
 has_children: false
